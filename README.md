@@ -1,4 +1,4 @@
-# MVVM_STUDY
+# 승리하는 MVVM STUDY 🔥
 
 ## 인원
  - [박우찬](https://github.com/Woozzang)
