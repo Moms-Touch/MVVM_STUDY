@@ -11,7 +11,7 @@
 </table>
 
 ## 1주차
-###RayWendelich MVVM 코드 2가지 학습해오기 ( Design Patterns & App Architecture )
+### RayWendelich MVVM 코드 2가지 학습해오기 ( Design Patterns & App Architecture )
        
        
 [Design Patterns MVVM Code](https://github.com/Moms-Touch/MVVM_STUDY/tree/main/MVVM_STUDY1/MVVM_STUDY1)
