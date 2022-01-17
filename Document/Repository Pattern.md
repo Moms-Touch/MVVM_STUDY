@@ -79,6 +79,7 @@ public class KooberUserSessionRepository: UserSessionRepository {
     이를 통해서 `SignInViewModel`은 `UserSessionRepository`에 정의된 메서드들을 사용할 수 있다. 하지만 ViewModel은 이 레포지토리의 구현이 어떻게 되어있는지는 알수 없을 뿐더러, 데이터의 출처도 역시 알 수 없다. → Decoupling이 되었다는 뜻이다.
     
 - 이 현상은 사실 엄청난 의의를 나타내는데, 결국 caller는 구현을 알 수 없다는 것이고, 어떤 다른 뷰모델이 `UserSessionRepository` 를 주입받아서 구현을 모드는 것이다. 이말은 결국 다른 fake remote API나 in-memory store로 바꾸더라도, 프로토콜은 안바뀌니깐 사용가능하다.
+- Repository Pattern을 사용하면서 정의된 인터페이스를 구현하는 Mock에 DI를 할 수 있게되면서 testable 해진다.
 
 ```swift
 public class SignInViewModel {
