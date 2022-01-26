@@ -21,23 +21,24 @@
 
 **의존성**은 특정한 일을 하기 위해서 다른 객체에 의존하고 있는 객체를 말한다.
 
-![스크린샷 2022-01-24 오전 12.45.33.png](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-24_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_12.45.33.png)
+<img width="543" alt="스크린샷_2022-01-24_오전_12 45 33" src="https://user-images.githubusercontent.com/69891604/151143069-972a184f-6cc5-4a41-a657-7f94082050b1.png">
+
 
 의존성은 또한 다른 객체들에도 의존할 수도 있다. 그 다른 객체들을 **전이적 의존성(Transitive dependency)**이라고 한다.
 
-![스크린샷 2022-01-24 오전 12.47.07.png](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-24_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_12.47.07.png)
+<img width="578" alt="스크린샷_2022-01-24_오전_12 47 07" src="https://user-images.githubusercontent.com/69891604/151143086-e9ede79a-1937-430f-9923-b891ea31b502.png">
 
 **Object-under-construction은 의존성에 의존하는 객체이다.**
 
-![스크린샷 2022-01-24 오전 12.48.49.png](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-24_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_12.48.49.png)
+<img width="483" alt="스크린샷_2022-01-24_오전_12 48 49" src="https://user-images.githubusercontent.com/69891604/151143115-71055fa7-a15b-43f1-8f21-dd297168891c.png">
 
 객체가 생성자 아래로 가는 이유는 **Consumer** 라는 다른 객체에 의해서 쓰여야하기 때문이다.
 
-![스크린샷 2022-01-24 오전 12.51.28.png](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-24_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_12.51.28.png)
+<img width="446" alt="스크린샷_2022-01-24_오전_12 51 28" src="https://user-images.githubusercontent.com/69891604/151143164-15c00453-8e60-45a6-9fae-c7fd9b0c6a0a.png">
 
 **Transitive dependency**에 의존하는 의존성에 의존하는 객체를 필요로 하는 소비자가 있고, 이것이 계속 이어져 나가는 것이 결국은 **객체** **그래프(object graph)**이다.
 
-![스크린샷 2022-01-24 오전 12.53.12.png](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-24_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_12.53.12.png)
+<img width="488" alt="스크린샷_2022-01-24_오전_12 53 12" src="https://user-images.githubusercontent.com/69891604/151143210-eb47ee5b-d853-4a52-990b-25b74ea43ca5.png">
 
 이 챕터에서는 의존성 패턴의 안과 밖을 모두 본다고 한다. 밖은 장기 밖에 있는 코드를 살펴볼 것이고, 안은 **object-under-contruction** 안에 있는 코드를 살펴볼 것이다. 
 
@@ -384,17 +385,18 @@ UIApplication 객체는 앱 객체 그래프의 root이다. UIApplicationDelegat
 
 KooberUserSessionRepository의 의존성 그래프
 
-![스크린샷 2022-01-25 오후 3.14.39.png](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-25_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.14.39.png)
+<img width="392" alt="스크린샷_2022-01-25_오후_3 14 39" src="https://user-images.githubusercontent.com/69891604/151143310-00c00fe8-7680-404c-b694-ea13b87fc37d.png">
 
 (구현타입이 프로토콜 타입에 의존하는 것 확인)
 
 `KooberUserSessionRepository`의 의존성 그래프는 `UserSessionDataStore`가 해결된다면 이렇게될 것입니다 (아래)
 
-![스크린샷 2022-01-25 오후 3.18.19.png](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-25_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.18.19.png)
+<img width="549" alt="스크린샷_2022-01-25_오후_3 18 19" src="https://user-images.githubusercontent.com/69891604/151143341-0f1b63aa-91d9-4941-a5b7-ebddea4ad807.png">
 
 마지막으로는 KooberUserSessionRepository의 완성된 의존성 그래프는 :
 
-![스크린샷 2022-01-25 오후 3.19.14.png](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-25_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.19.14.png)
+<img width="515" alt="스크린샷_2022-01-25_오후_3 19 14" src="https://user-images.githubusercontent.com/69891604/151143381-739378d4-e9b3-41e0-8fee-9f49cc1e9a01.png">
+
 
 ### LauchViewController의 의존성 그래프
 
@@ -405,11 +407,10 @@ KooberUserSessionRepository의 의존성 그래프
 - LaunchViewModel: 이 뷰모델은 `LauchViewController`의 UI 상태를 가지고 있다. 이 객체는 보통 장기 의존성이다. 하지만 쿠버에서는 앱이 프로세스 생애주기일떄 한번만 실행되므로 `LaunchViewController`가 하나만 생성된다. 결국은 이 의존성은 임시적이다.
 - LaunchViewController: 쿠버가 처음 실행될때, `LaunchViewController`는 로그인한 사용자를 찾고 스플래쉬 스크린을 띄운다. `LaunchViewController`는 로그인한 유저를 찾기 위해서 `LaunchViewModel`에 의존한다.
     
-    ![스크린샷 2022-01-25 오후 3.45.10.png](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-25_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.45.10.png)
-    
-    ![스크린샷 2022-01-25 오후 3.56.08.png](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-25_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_3.56.08.png)
-    
+<img width="535" alt="스크린샷_2022-01-25_오후_3 45 10" src="https://user-images.githubusercontent.com/69891604/151143411-ebf03e2e-ead3-48fd-a6e0-a8b896865d2c.png">
 
+<img width="531" alt="스크린샷_2022-01-25_오후_3 56 08" src="https://user-images.githubusercontent.com/69891604/151143456-b3f634f9-6f17-4aa3-8c41-fd592b8dae9f.png">
+    
 ### OnboardingViewController의 의존성 그래프
 
 - OnboardingViewModel: `OnboardingViewController`의 상태를 가지고 있다. 이 객체는 사용자가 로그아웃할때 오래사는 의존성이다.
@@ -423,34 +424,35 @@ KooberUserSessionRepository의 의존성 그래프
 - SignUpViewController
 - OnboardingViewController: 만약에 사용자가 로그인을 안해쓰면 MainViewController는 OnboardingViewController를 보여줄 것이다. OnboardingViewController는 컨테이너 뷰컨트롤러로 welcome, signin,signup 중 어디로 보낼 수 있다. 이 컨트롤러는 유저가 로그인을 안하는 동안에만 활성상태여야한다.
     
-    ![스크린샷 2022-01-25 오후 4.11.44.png](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-25_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.11.44.png)
-    
-    ![스크린샷 2022-01-25 오후 4.12.14.png](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-25_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.12.14.png)
-    
+<img width="531" alt="스크린샷_2022-01-25_오후_4 11 44" src="https://user-images.githubusercontent.com/69891604/151143518-53bfabce-1ec5-47d7-9cf1-f42647a6fb5b.png">
 
+    
+<img width="511" alt="스크린샷_2022-01-25_오후_4 12 14" src="https://user-images.githubusercontent.com/69891604/151143541-4bde0f1f-27c0-47ba-bfed-23ee18b0f345.png">
+
+    
 ### MainViewController의 의존성 그래프
 
 - MainViewModel : MainViewModel은 MainViewController의 UI 상태를 가지고 있다. 객체는 상태를 가지고 있다. 그래서 길게사는 의존성이다.
 - MainViewController : MainViewController은 쿠버의 루트뷰컨트롤러이다. MainViewController은 컨테이너 뷰컨트롤러로 상단의 네비게이션 관리를한다. MainViewController은 런치스크린, 로그인 스크린, 회원가입스크린 의 present와 dismiss를 담당한다. MainViewController 뷰컨트롤러 팩토리메서드에 의존한다.
     
-    ![스크린샷 2022-01-25 오후 4.22.16.png](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-01-25_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.22.16.png)
+<img width="573" alt="스크린샷_2022-01-25_오후_4 22 16" src="https://user-images.githubusercontent.com/69891604/151143587-004d20b9-28a3-4e0e-a375-ceae2fa0b532.png">
     
 
 ## 온디멘드 접근 적용하기
 
-[온디멘드 접근법 적용하기(잘안쓰임)](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%8B%E1%85%A9%E1%86%AB%E1%84%83%E1%85%B5%E1%84%86%E1%85%A6%E1%86%AB%E1%84%83%E1%85%B3%20%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%B3%E1%86%AB%E1%84%87%E1%85%A5%E1%86%B8%20%E1%84%8C%E1%85%A5%E1%86%A8%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5(%E1%84%8C%E1%85%A1%E1%86%AF%E1%84%8B%E1%85%A1%E1%86%AB%E1%84%8A%E1%85%B3%E1%84%8B%E1%85%B5%E1%86%B7)%20a2cd5600e3724725a72de3f10e2f4f9f.md)
+[온디멘드 접근법 적용하기(잘안쓰임)](https://github.com/pastapeter/MVVM_STUDY/blob/main/Document/%EC%98%A8%EB%94%94%EB%A9%98%EB%93%9C%20%EC%A0%91%EA%B7%BC%EB%B2%95%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0(%EC%9E%98%EC%95%88%EC%93%B0%EC%9E%84).md)
 
 ## 팩토리 접근법 적용하기
 
-[팩토리 접근법 적용하기](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%91%E1%85%A2%E1%86%A8%E1%84%90%E1%85%A9%E1%84%85%E1%85%B5%20%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%B3%E1%86%AB%E1%84%87%E1%85%A5%E1%86%B8%20%E1%84%8C%E1%85%A5%E1%86%A8%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20d0b5eb19551141acb24fdceac1e1436f.md)
+[팩토리 접근법 적용하기](https://github.com/pastapeter/MVVM_STUDY/blob/main/Document/%ED%8C%A9%ED%86%A0%EB%A6%AC%20%EC%A0%91%EA%B7%BC%EB%B2%95%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0.md)
 
 ## 싱글 컨테이너 접근법 적용하기
 
-[싱글컨테이너 접근법](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%89%E1%85%B5%E1%86%BC%E1%84%80%E1%85%B3%E1%86%AF%E1%84%8F%E1%85%A5%E1%86%AB%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%82%E1%85%A5%20%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%B3%E1%86%AB%E1%84%87%E1%85%A5%E1%86%B8%20550e5ef170574cc6ade0727b059e4279.md)
+[싱글컨테이너 접근법](https://github.com/pastapeter/MVVM_STUDY/blob/main/Document/%EC%8B%B1%EA%B8%80%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EC%A0%91%EA%B7%BC%EB%B2%95.md)
 
 ## 컨테이너 계층 접근법 적용하기
 
-[컨테이너 계층 접근법 적용하기](Objects%20&%20Their%20Dependencies%20db4aa57c2e114ebe9fca4ce6f7089238/%E1%84%8F%E1%85%A5%E1%86%AB%E1%84%90%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%82%E1%85%A5%20%E1%84%80%E1%85%A8%E1%84%8E%E1%85%B3%E1%86%BC%20%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%B3%E1%86%AB%E1%84%87%E1%85%A5%E1%86%B8%20%E1%84%8C%E1%85%A5%E1%86%A8%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%20a1abcb0f5f514d81a297a1899a79c531.md)
+[컨테이너 계층 접근법 적용하기](https://github.com/pastapeter/MVVM_STUDY/blob/main/Document/%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88%20%EA%B3%84%EC%B8%B5%20%EC%A0%91%EA%B7%BC%EB%B2%95%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0.md)
 
 ## 키포인트
 
