@@ -21,3 +21,9 @@
        
        
 [Repository Pattern](https://github.com/Moms-Touch/MVVM_STUDY/blob/main/Document/Repository%20Pattern.md)
+
+       
+## 2주차
+### RayWendelich 4장 ( App Architecture )
+       
+[Objects & their Dependencies](https://github.com/pastapeter/MVVM_STUDY/blob/main/Document/Objects%20%26%20Their%20Dependencies.md)
